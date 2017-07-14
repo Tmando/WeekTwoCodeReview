@@ -1,3 +1,18 @@
+$colFlexBasis : 50vw;
+ $colHeight: 100vh;
+ /* Syles for the Header */
+  #header_flexRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1{
+      color: white;
+    }
+
+
+  }
+//  Styles for responsive Design
 @media screen and (max-width: 320px) and (min-width: 0px) {
   img{
     max-height:8vh;
@@ -9,9 +24,6 @@
       max-height:10vh;
     }
 
-    }
-    body{
-      font-family: 'Droid Sans';
     }
 
   #container {
@@ -32,38 +44,27 @@
   footer {
     flex-basis: 10vh;
     background-color: black;
-    color:white;
   }
-
+  /* flex Container inside content. Content inside this container should be in row */
   #content_flexRow {
     display: flex;
     flex-direction: row;
   }
-
+  /* Syles for column one and column two */
   #col1 {
-    flex-basis: 50vw;
+    flex-basis: $colFlexBasis;
     border-right: 30px solid black;
     background-color: yellow;
-    height: 100vh;
+    height: $colHeight;
 
   }
 
   #col2 {
-    flex-basis: 50vw;
+    flex-basis: $colFlexBasis;
     background-color: orange;
-    height: 100vh;
+    height: $colHeight;
   }
 
-  #header_flexRow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #header_flexRow h1 {
-    color: white;
-  }
 
   #col1_flexCol {
     display: flex;
